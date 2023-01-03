@@ -9,9 +9,13 @@ This template is for a simple s3 bucket. The template will be uploaded to a s3 b
 ```python
 aws s3 cp templates/template1-s3-bucket.yaml s3://<bucket-name>/templates/template1-s3-bucket.yaml
 ```
-
-Exercise 1: Extend this template by adding another S3 bucket. You will have to update the CloudFormation template, upload the revision to S3 and run the aws cloudformation update-stack command.
-
+Once the template has been uploaded to S3, the CloudFormation stack can be created with this code:
+```python
+aws cloudformation create-stack \
+--stack-name <cf-stack-name> \
+--template-url https://<bucket-name>.s3.eu-west-2.amazonaws.com/templates/template1-s3-bucket.yaml \
+--region eu-west-2
+```
 
 ### Template2: Lambda Function
 
