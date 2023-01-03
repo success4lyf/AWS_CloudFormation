@@ -6,3 +6,5 @@ Template1: S3 Bucket
 Template2: Lambda Function
 
 Template3: Lambda Function with S3 Trigger
+
+Template4: Lambda Deployment Packages
