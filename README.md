@@ -16,6 +16,7 @@ aws cloudformation create-stack \
 --template-url https://<bucket-name>.s3.eu-west-2.amazonaws.com/templates/template1-s3-bucket.yaml \
 --region eu-west-2
 ```
+The template can be extended by adding another S3 bucket, uploading the revision to S3 and run then using the aws cloudformation update-stack command to update the stack.
 
 ### Template2: Lambda Function
 
