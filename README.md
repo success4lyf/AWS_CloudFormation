@@ -6,11 +6,11 @@ A CloudFormation template is a declaration of AWS resources that make up a stack
 
 ### Template1: S3 Bucket
 This template is for a simple s3 bucket. The template will be uploaded to a s3 bucket befor deploying to stack. The code to upload the template to s3 bucket is:
-```python
+```sh
 aws s3 cp templates/template1-s3-bucket.yaml s3://<bucket-name>/templates/template1-s3-bucket.yaml
 ```
 Once the template has been uploaded to S3, the CloudFormation stack can be created with this code:
-```python
+```sh
 aws cloudformation create-stack \
 --stack-name <cf-stack-name> \
 --template-url https://<bucket-name>.s3.eu-west-2.amazonaws.com/templates/template1-s3-bucket.yaml \
